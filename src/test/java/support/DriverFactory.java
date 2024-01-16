@@ -30,7 +30,6 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         TestConfig testConfig = TestDataManager.getTestConfig();
-        testConfig.setBrowser("firefox");
         if (driverThreadLocal.get() == null) {
             Dimension size = new Dimension(testConfig.getWindowWidth(), testConfig.getWindowHeight());
             Point position = new Point(0, 0);
